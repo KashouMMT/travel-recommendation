@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us — TravelBloom</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="brand">
+            <img src="images/logo.png" alt="logo" class="logo" />
+            <a class="brand-name" href="index.html">TravelBloom</a>
+        </div>
+        <ul class="menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html" class="active">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+
+
+    <main class="container narrow">
+        <section>
+            <h1>About TravelBloom</h1>
+            <p>
+                TravelBloom is a tiny team with a big goal: make trip discovery effortless.
+                We curate destinations across beaches, temples, and countries—pairing visuals with quick, practical
+                tips.
+            </p>
+        </section>
+
+
+        <section>
+            <h2>Our Team</h2>
+            <div class="team-grid">
+                <article class="card team">
+                    <img src="images/team-alex.jpg" alt="Alex" />
+                    <h3>Alex Nguyen</h3>
+                    <p>Founder & Editor</p>
+                </article>
+                <article class="card team">
+                    <img src="images/team-sora.jpg" alt="Sora" />
+                    <h3>Sora Tanaka</h3>
+                    <p>Research Lead</p>
+                </article>
+                <article class="card team">
+                    <img src="images/team-maya.jpg" alt="Maya" />
+                    <h3>Maya Patel</h3>
+                    <p>Design & Web</p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+
+    <footer class="footer">© <span id="year"></span> TravelBloom</footer>
+    <script>
+        // small helper to keep footer year current
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+
+</html>

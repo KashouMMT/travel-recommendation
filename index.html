@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TravelBloom</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="app.js"></script>
+</head>
+
+<body>
+    <!-- Navbar with search (Task 2) -->
+    <nav class="navbar">
+        <div class="brand">
+            <img src="images/logo.png" alt="logo" class="logo" />
+            <a class="brand-name" href="index.html">TravelBloom</a>
+        </div>
+        <ul class="menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+        <div class="search-box">
+            <input id="searchInput" type="text" placeholder="Search: beach, temple, country" />
+            <button id="searchBtn">Search</button>
+            <button id="clearBtn" class="secondary">Reset</button>
+        </div>
+    </nav>
+
+
+    <!-- Hero / Background + Intro (Task 3) -->
+    <header class="hero">
+        <div class="overlay">
+            <h1>Find your next escape</h1>
+            <p>Curated beaches, sacred temples, and country highlights—tailored to your vibe.</p>
+            <div class="socials">
+                <a aria-label="Instagram" href="#">&#x1F47E;</a>
+                <a aria-label="TikTok" href="#">&#x1F3A5;</a>
+                <a aria-label="X / Twitter" href="#">&#x1F426;</a>
+            </div>
+        </div>
+    </header>
+
+
+    <!-- Results (Tasks 6–9) -->
+    <main class="container">
+        <section id="results" class="results-grid" aria-live="polite"></section>
+    </main>
+
+
+    <footer class="footer">© <span id="year"></span> TravelBloom</footer>
+</body>
+
+</html>

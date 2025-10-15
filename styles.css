@@ -1,0 +1,233 @@
+:root {
+    --bg: #0b1320;
+    --muted: #7f8da1;
+    --card: #101a2e;
+    --brand: #26adb8;
+    --text: #e8eefc;
+    --soft: #14203a;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Noto Sans, Arial, sans-serif;
+    color: var(--text);
+    background: var(--bg);
+}
+
+
+/* Navbar */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: .75rem 1rem;
+    background: rgba(16, 26, 46, .9);
+    position: sticky;
+    top: 0;
+    backdrop-filter: blur(6px);
+    z-index: 50;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.logo {
+    width: 36px;
+    height: 36px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 0 0 2px var(--soft);
+}
+
+.brand-name {
+    color: var(--text);
+    text-decoration: none;
+    font-weight: 700;
+    letter-spacing: .4px;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+    padding: 0;
+    margin: 0;
+}
+
+.menu a {
+    color: var(--text);
+    text-decoration: none;
+    opacity: .9;
+}
+
+.menu a.active,
+.menu a:hover {
+    color: var(--brand);
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.search-box input {
+    padding: .55rem .7rem;
+    border: 1px solid var(--soft);
+    background: var(--card);
+    color: var(--text);
+    border-radius: .6rem;
+    min-width: 260px;
+}
+
+.search-box button {
+    padding: .55rem .9rem;
+    border: 1px solid var(--brand);
+    background: var(--brand);
+    color: #031018;
+    border-radius: .6rem;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.search-box .secondary {
+    border-color: var(--soft);
+    background: transparent;
+    color: var(--text);
+}
+
+
+/* Hero */
+.hero {
+    height: 60vh;
+    min-height: 360px;
+    background: url('images/hero.jpg') center/cover no-repeat fixed;
+    display: grid;
+    place-items: center;
+    position: relative;
+}
+
+.hero .overlay {
+    background: rgba(3, 16, 24, .55);
+    padding: 2rem 1.5rem;
+    border-radius: 1rem;
+    text-align: center;
+    max-width: 880px;
+}
+
+.hero h1 {
+    margin: 0 0 .5rem;
+    font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.hero p {
+    margin: 0;
+    color: var(--muted);
+}
+
+.socials {
+    margin-top: 1rem;
+    display: flex;
+    gap: .75rem;
+    justify-content: center;
+}
+
+.socials a {
+    color: var(--text);
+    text-decoration: none;
+    font-size: 1.2rem;
+    opacity: .9;
+}
+
+
+/* Layout */
+.container {
+    width: min(1100px, 92%);
+    margin: 2rem auto;
+}
+
+.container.narrow {
+    width: min(800px, 92%);
+}
+
+.footer {
+    text-align: center;
+    padding: 2rem 1rem;
+    color: var(--muted);
+    border-top: 1px solid var(--soft);
+}
+
+
+/* Cards */
+.results-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 1rem;
+}
+
+.card {
+    background: var(--card);
+    border: 1px solid var(--soft);
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .25);
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+}
+
+.card .content {
+    padding: 1rem;
+}
+
+.card h3 {
+    margin: 0 0 .25rem;
+    font-size: 1.1rem;
+}
+
+.card p {
+    margin: 0;
+    color: var(--muted);
+    line-height: 1.5;
+}
+
+.card .meta {
+    margin-top: .6rem;
+    font-size: .9rem;
+    color: var(--text);
+    opacity: .9;
+}
+
+
+/* Team */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 1rem;
+}
+
+.team img {
+    height: 180px;
+    object-fit: cover;
+}
+
+
+@media (max-width: 720px) {
+    .search-box input {
+        min-width: 170px;
+    }
+}
